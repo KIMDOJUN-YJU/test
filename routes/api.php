@@ -23,8 +23,10 @@ Route::resource('deliverys','DeliveryController');
 Route::resource('evaluations','EvaluationController');
 Route::resource('kstoreinfos','KstoreinfoController');
 Route::resource('reservations','ReservationController');
+Route::resource('rphotos','RphotoController');
 Route::get('rtshow/{id}', 'ReservationController@rtshow');
 Route::get('storeshow/{id}', 'KeeperxController@storeshow');
+Route::get('rktshowall/{id}', 'ReservationController@rktshowall');
 
 Route::post('register', 'UserController@register');
 Route::post('login', 'UserController@login');

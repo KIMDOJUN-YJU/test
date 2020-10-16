@@ -214,7 +214,7 @@ class MiniMap extends Component{
 				props => (
 					<GoogleMap google={ this.props.google }
 					           defaultZoom={ this.props.zoom }
-					           defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
+							   defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
 					>
 						{/* InfoWindow on top of marker */}
 						<InfoWindow
@@ -253,15 +253,15 @@ class MiniMap extends Component{
 		if( this.props.center.lat !== undefined ) {
 			map = <div>
 				{/* <div>
-          <div className="form-group">
-						<label htmlFor="">위도</label>
-						<input type="text" name="area" className="form-control" onChange={ this.onChange }  value={ this.state.markerPosition.lat }/>
-					</div>
-          <div className="form-group">
-						<label htmlFor="">경도</label>
-						<input type="text" name="area" className="form-control" onChange={ this.onChange }  value={ this.state.markerPosition.lng }/>
-					</div> */}
-				{/* </div> */}
+          		<div className="form-group">
+					<label htmlFor="">위도</label>
+					<input type="text" name="area" className="form-control" onChange={ this.onChange }  value={ this.state.markerPosition.lat }/>
+				</div>
+          		<div className="form-group">
+					<label htmlFor="">경도</label>
+					<input type="text" name="area" className="form-control" onChange={ this.onChange }  value={ this.state.markerPosition.lng }/>
+				</div>
+				</div> */}
 				<AsyncMap
 					googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${GoogleMapsAPI}&libraries=places`}
 					loadingElement={

@@ -41,7 +41,9 @@ class DeliveryController extends Controller
       $json = \App\Deliverys::create([
           'delivery_name'=>$request->delivery_name,
           'delivery_email'=>$request->delivery_email,
+          'delivery_car'=>$request->delivery_car,
           'delivery_phonenumber'=>$request->delivery_phonenumber,
+          'delivery_password'=>$request->delivery_password,
       ]);
       if($json){
           return json_encode('Insert seccessfully');
@@ -88,7 +90,9 @@ class DeliveryController extends Controller
       $json = \App\Deliverys::find($id)->update([
         'delivery_name'=>$request->delivery_name,
         'delivery_email'=>$request->delivery_email,
+        'delivery_car'=>$request->delivery_car,
         'delivery_phonenumber'=>$request->delivery_phonenumber,
+        'delivery_password'=>$request->delivery_password,
       ]);
       if($json){
           return json_encode('Insert seccessfully');

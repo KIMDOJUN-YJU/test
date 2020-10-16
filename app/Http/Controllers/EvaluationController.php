@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EvaluationController extends Controller
 {
@@ -59,7 +60,13 @@ class EvaluationController extends Controller
    */
   public function show($id)
   {
-      //
+    $evaluations = DB::table('evaluations')
+    ->join('tourists','evaluations.tourist_id', '=','tourists.tourist_id')
+    ->select('tourists.tourist_name','evaluations.evaluation_id','evaluations.keeper_store_id','evaluations.tourist_id','evaluations.starpoint','evaluations.content')
+    ->where('keeper_store_id',$id)
+    ->get();
+
+    return json_encode($evaluations, JSON_UNESCAPED_UNICODE);
   }
 
   /**

@@ -24,12 +24,12 @@ body{
 }
 /*위치 조정 등*/
 .container-fluid .row{
-    padding-top: 1rem;
-    padding-left: 7rem;
+    padding-top: 2.5rem;
+    padding-left: 12rem;
 }
 
 .col-md-4{
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
 }
 
 .overflow{
@@ -47,7 +47,7 @@ body{
 /*매장관리 MediaCard*/
 .container-fluid1 .row{
     padding-top: 10rem;
-    padding-left: 7rem;
+    padding-left: 1rem;
 }
 
 .col-md-5{

@@ -18,7 +18,7 @@ toggleCollapse = collapseID => () =>
 logOut(e) {
   e.preventDefault()
   localStorage.removeItem('usertoken')
-  this.props.history.push(`/`)
+  this.props.history.push('/')
 }
 
 render() {
@@ -37,13 +37,13 @@ render() {
             <MDBCollapse id="navbarCollapse" isOpen={this.state.collapseID} navbar>
               <MDBNavbarNav left>
                 <MDBNavItem active>
-                  <MDBNavLink to="/maps">Maps</MDBNavLink>
+                  <MDBNavLink to="/maps">マップ</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem active>
-                  <MDBNavLink to="/keeper_login">Login</MDBNavLink>
+                  <MDBNavLink to="/keeper_login">ログイン</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem active>
-                  <MDBNavLink to="/keeper_register">KeeperRegister</MDBNavLink>
+                  <MDBNavLink to="/keeper_register">キッパー新規取得</MDBNavLink>
                 </MDBNavItem>
               </MDBNavbarNav>
               <MDBNavbarNav right>
@@ -77,10 +77,10 @@ render() {
             <MDBCollapse id="navbarCollapse" isOpen={this.state.collapseID} navbar>
               <MDBNavbarNav left>
                 <MDBNavItem active>
-                  <MDBNavLink to="/keepermenu/main">KeeperMenu</MDBNavLink>
+                  <MDBNavLink to="/keepermenu/main">キッパーメニュー</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem active>
-                  <MDBNavLink to='/' onClick={this.logOut.bind(this)}>Logout</MDBNavLink>
+                  <MDBNavLink to='' onClick={this.logOut.bind(this)}>ログアウト</MDBNavLink>
                 </MDBNavItem>
               </MDBNavbarNav>
               <MDBNavbarNav right>

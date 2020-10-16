@@ -16,25 +16,25 @@ const LeftSection = () => {
       </div>
         <ul className="LeftSideBar__LeftSection__menuWrapper" onClick={() => setIsShowSidebar(false)}>
           <li>
-            <Link to={'/keepermenu/main'}>메인</Link>
+            <Link to={'/keepermenu/main'}>メイン</Link>
           </li>
           <li>
-            <Link to={'/keepermenu/reservationmanagement'}>예약관리</Link>
+            <Link to={'/keepermenu/reservationmanagement'}>予約管理</Link>
           </li>
           <li>
-            <Link to={'/keepermenu/keepermanagement'}>매장관리</Link>
+            <Link to={'/keepermenu/keepermanagement'}>保管所管理</Link>
           </li>
           <li>
-            <Link to={'/keepermenu/reservationlist'}>예약내역</Link>
+            <Link to={'/keepermenu/reservationlist'}>予約リスト</Link>
           </li>
           <li>
-            <Link to={'/keepermenu/paymentlist'}>결제내역</Link>
+            <Link to={'/keepermenu/paymentlist'}>決済リスト</Link>
           </li>
           <li>
-            <Link to={'/keepermenu/profile'}>프로필</Link>
+            <Link to={'/keepermenu/profile'}>プロフィール</Link>
           </li>
           <li>
-            <Link to={'/keepermenu/others'}>기타</Link>
+            <Link to={'/keepermenu/others'}>利用規約</Link>
           </li>
         </ul>
     </div>

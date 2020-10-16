@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import PaymentTable from '../table/PaymentTable'
 import LeftSideBar from '../animations/LeftSideBar';
+import '../style/Main_image.css';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -18,13 +20,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PaymentList() {
   const classes = useStyles();
-
   return (
-    <div>
+    <div className='Main_image3' style={{width: '100vw',height: '100vh'}}>
       <LeftSideBar />
       <div className={classes.root}>
         <Paper variant="outlined" square>
-            <PaymentTable />
+          <div className="container text-center mb-5" >
+              <h1  style={{textAlign:'center'}}>決済リスト</h1>
+          </div>
+            <PaymentTable/>
         </Paper>
       </div>
     </div>

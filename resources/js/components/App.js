@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import {BrowserRouter,Router, Route, HashRouter} from 'react-router-dom'
-import Home from './Home'
+import ReactDOM from 'react-dom';
+import firebase from 'firebase';
+
+import {BrowserRouter,Router, Route, HashRouter} from 'react-router-dom';
+import Home from './Home';
 import '../style/App.css';
 import Maps from './Maps';
 import Menu from './Menu'
@@ -23,6 +25,38 @@ import Profile from '../pages/Profile'
 import Others from '../pages/Others'
 import EditAsoCafe from '../Card/EditAsoCafe'
 import EditTwoSome from '../Card/EditTwoSome'
+import EditCgvHyun from '../Card/EditCgvHyun';
+
+const config =  { 
+    apiKey: "AIzaSyDaeJwtorHi3g-ytqU9bn5cjFhKO-2kbIE",
+    authDomain: "maptest3-b3603.firebaseapp.com",
+    databaseURL: "https://maptest3-b3603.firebaseio.com",
+    projectId: "maptest3-b3603",
+    storageBucket: "maptest3-b3603.appspot.com",
+    messagingSenderId: "676243801867",
+    appId: "1:676243801867:web:6f42292da369edb204c40e",
+    measurementId: "G-DPDEPVDBG7"
+}; 
+firebase.initializeApp(config);
+const messaging = firebase.messaging();
+
+messaging.requestPermission()
+.then(function() {
+	console.log('허가!');
+	return messaging.getToken(); //토큰을 받는 함수를 추가!
+})
+.then(function(token) {
+	console.log(token); //토큰을 출력!
+})
+.catch(function(err) {
+	console.log('fcm에러 : ', err);
+})
+
+messaging.onMessage(function(payload){
+	console.log(payload.notification.title);
+	console.log(payload.notification.body);
+})
+
 
 class App extends React.Component {
     render(){
@@ -41,8 +75,9 @@ class App extends React.Component {
                 <Route path='/keepermenu/paymentlist' component={PaymentList}/>
                 <Route path='/keepermenu/profile' component={Profile}/>
                 <Route path='/keepermenu/others' component={Others}/>
-                <Route path='/keepermenu/kpmanagement/editasocafe' component={EditAsoCafe}/>
-                <Route path='/keepermenu/kpmanagement/edittwosome' component={EditTwoSome}/>
+                <Route path='/keepermenu/kpmanagement/edit/1' component={EditAsoCafe}/>
+                <Route path='/keepermenu/kpmanagement/edit/2' component={EditTwoSome}/>
+                <Route path='/keepermenu/kpmanagement/edit/3' component={EditCgvHyun}/>
             </BrowserRouter>
           );
     }

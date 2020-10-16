@@ -8,32 +8,83 @@ const Others = () => {
             <LeftSideBar/>
             <div className="container">
                 <div>
-                    <h1 style={{textAlign:"left"}}>Terms of service for Dokonimo users</h1>
-                    <p>This terms of service for Dokonimo users (hereinafter referred to as "the terms of service") stipulates matters that people those who apply for the use of a space (which will be defined in Article 1-1) (hereinafter referred to as "a user (users)") should comply with and the relations of rights and obligations between users and Dokonimo Inc. (hereinafter referred to as "we") in terms of the use of "Dokonimo" (hereinafter referred to as "the service" and including a service after changing the name and the content of the service whatever the reason is) that we provide. Please read through all the sentences before consenting to "the terms of service" if you will use the service.</p>
+                    <h1 style={{textAlign:"left"}}>Dokonimoスペース提供者 利用規約</h1>
+                    <p>ユーザーの荷物を預かるスペースを提供する事業者（以下「オーナー」という。）として本サービスを使用しようとする皆様は、Dokonimo株式会社（以下「弊社」という。）に対して、弊社が提供する「Dokonimo」（理由の如何を問わず、サービスの名称または内容が変更された場合は、当該変更後のサービスを含み、以下「本サービス」という。）に関し、オーナー向け利用規約（以下「本規約」という。）の内容に同意した上で、以下の条件に基づき本サービスへの登録を申し込むものとします。</p>
                 </div>
                 <div class="line-horizontal"/>
                 <div style={{marginTop:"20px"}}>
-                    <h4>Article 1 (The service)</h4>
+                    <h4>第1条（利用契約等の成立）</h4>
                 </div>
                 <div style={{marginTop:"20px"}}>
                     <ol>
-                        <li>This service is to provide users using our website or mobile application (hereinafter referred to as 'platform'), with information regarding available spaces in shops and other venues (hereinafter referred to as 'space'), and the owner responsible for overseeing said space (hereinafter referred to as 'owner'), for storage of luggage and other items.</li>
-                        <li>Dokonimo Inc. shall not be directly involved between the actual contract binding made between the user and the owner.The company is solely responsible for providing information regarding open space and the responsible owner only.</li>
-                        <li>Users and Owners agree to form a mutual, deposition contract (hereinafter referred to as a 'luggage storage contract') to store portable luggage, bicycles and other items deemed as acceptable luggage. Dokonimo Inc. and the User is not directly tied under any contractual obligations. Any terms & agreements made between the User and Owner shall oversee all others terms made within this Terms & Conditions, excluding those concerning the company's intellectual and property rights</li>
-                        <li>All pricings and service instructions are as explained on the platform, and Dokonimo Inc. shall assume that all registered users agree to and understand the information provided.</li>
-                        <li>Fees for use may vary according to the period and the operational status.</li>
-                        <li>All prices regarding the usage of our service shall be shown individually on each owner's space page. All overstay fees and cancellation fees shall be shown this way as well.</li>
-                        <li>Users agree to register credit card information specified by Dokonimo Inc, and make payments regarding space reservations, cancellation fees and overstay fees as mentioned on the owner's individual pages when due. In case payment by credit card cannot be confirmed, the user shall complete payment under specifications from Dokonimo Inc.</li>
-                        <li>Users agree that Dokonimo Inc. shall hold the right to temporarily accept and handle all payments made by the user, on behalf of the owner. Any pending payments for the owner by the user shall be lifted when Dokonimo Inc receives payment from the user.</li>
-                        <li>Users agree to adhere to the privacy policy stated upon the platform and agree to provide personal and other information necessary to Dokonimo Inc. Dokonimo Inc. shall provide the collected information to be used by the owner as necessary, and users are deemed to have agreed to the conditions above by using this service.</li>
-                        <li>All help articles and rules listed on our platform is deemed to be a part of our terms and conditions, and is to be treated as such.</li>
-                        <li>Owners shall hold the right to check the contents of all luggage deposited by the user. Should the user object to this, the owner has the right to refuse said luggage from storage. Dokonimo Inc. shall not be responsible for any losses or trouble that occurs from refusal of service by the owner.  </li>
-                        <li>Users agree in case the owner suspects that a user's luggage violates Japanese law or other terms and conditions set by Dokonimo Inc, owners hold the right to inspect the contents of users' luggage, contact lawful authorities and carry out other necessary actions for lawful procedures. Dokonimo Inc. and owners shall not be held responsible for any losses sustained by the user as a result of the actions stated above.</li>
-                        <li>Users shall announce and warrant other users and owners that the user has sole ownership on any luggage placed inside a space and has the right of disposal as well.</li>
-                        <li>Users shall not use a reserved space longer than the designated period, and agrees to retrieve luggage within said period. Users agree that in case the duration of luggage storage surpasses the designated period, users will be held responsible for all overstay charges that occur and that the luggage be moved from the reserved space to a location specified under Dokonimo Inc.</li>
-                        <li>A luggage storage agreement between users and owners shall be in effect when the user registers a space for use, under the terms and conditions set upon by Dokonimo Inc.  </li>
-                        <li>Damage shall be paid within the range which compensates a user as the insured of a damage insurance as for the damage caused to a baggage due to accidents such as fouling and break in a period when a user uses a space designated between a user and a space provider in use of the service. A user shall consent that we have the right regarding receipt of premium of a damage insurance for a user that we have agreement with as the insured.</li>
+                        <li>本サービスは、本サービスを利用して荷物を預ける者（以下「ユーザー」という。）の荷物（以下「荷物」という。）を置くための店舗又は事業所のスペース（以下「スペース」という。）においてユーザーの荷物を預かる事業者並びにスペースの空き及び保管状況に関する情報を、ユーザーに対して、弊社のウェブサイト又はアプリ（以下「ウェブサイト等」という。）上で提供するサービスです。</li>
+                        <li>ユーザーとオーナーは、ユーザーの携帯品その他通常外出時に携帯する範囲内の物品並びに自転車の保管を目的とする寄託契約（以下「荷物預かり契約」という、以下同じ。）を自己の責任においてに締結するものであり、弊社がユーザーの荷物預かりに関する契約の当事者になるものではありません。ユーザーとオーナーとの契約は、弊社の権利義務に関するものを除き、本利用規約に優先して適用されるものとします。</li>
+                        <li>オーナーは、本規約を確認し、同意の上で本サービスの登録の申込みを行い、弊社が当該申込みを承諾したとき、オーナーは本サービスに登録され、本規約の諸規定に従った本サービスの利用にかかる契約（以下「利用契約」という。）がオーナーと弊社との間に成立するものとします。</li>
+                        <li>オーナーは、利用契約成立後直ちに、弊社の指定した本サービスの利用に際して必要な情報を、Web又は書面その他弊社の指定する方法により弊社に通知するものとします。</li>
+                        <li>前２項の規定にかかわらず、弊社は、オーナーが以下の項目に該当するときは、登録の承諾をしない場合があり、承諾がなされなかった場合、申込みの効力は失効するものとします。
+                            a. 過去に登録の取消しが行われている場合
+                            b. 申込み内容に虚偽があった場合。
+                            c. オーナーの指定したクレジットカード又は支払口座につき、クレジットカード会社、収納代行会社、又は金融機関等により、利用停止処分等が行われている場合。
+                            d. 反社会的勢力等（暴力団、暴力団員、右翼団体、反社会的勢力、その他これに準ずる者を意味する。以下同じ。）である、又は資金提供その他を通じて反社会的勢力等の維持、運営若しくは経営に協力若しくは関与する等反社会的勢力等との何らかの交流若しくは関与を行っていると弊社が判断した場合
+                            e. その他弊社が、オーナーを本サービスに登録することを不適当と判断する場合。</li>
+                        <li>オーナーは、 アカウント情報が盗まれ、又は第三者に使用されていることが判明した場合には、直ちにその旨を弊社に通知するとともに、弊社からの指示に従うものとします。</li>
+                        <li>オーナーとユーザー間の荷物預かり契約は、本サービスにてユーザーがスペースの利用を申し込んだときに、当該申込みの内容及び本規約に従って成立するものとする。</li>
                     </ol>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <h4>第2条（登録内容の変更）</h4>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <ol>
+                        <li>オーナーは、弊社に対して、登録申込み時の届出内容に変更があった場合には、速やかに所定の変更を行うものとします。</li>
+                        <li>オーナーは、オーナーが前項の変更を怠った場合に、弊社からオーナー宛の通知が不到達となっても、通常到達すべきときに到達したものとみなされることをあらかじめ異議なく承諾するものとします。</li>
+                        <li>弊社は、独自の判断により、オーナーへの事前通知なしに会員マイページ等のバージョンアップや変更・追加等をすることができるものとします。</li>
+                    </ol>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <h4>第3条（審査）</h4>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <ol>
+                        <li>弊社は、本サービス上にオーナーが掲載するスペース及び保管状況に関する情報を提供するサイトページ（以下「サイトページ」という）の確認や審査を行うこととし、当該サイトページが、弊社の審査基準を満たしていると判断した場合のみ、当該サイトページを本サービス上に掲載することを許可する。オーナーは、サイトページを任意の時期に変更することができます。また、オーナーは、サイトページを常に最新の情報に更新するよう努めることとします。</li>
+                        <li>社は、オーナーのサイトページが本サービスにふさわしくないと判断した場合、その内容及び表示を変更するよう求め、又は変更・削除することができ、オーナーはこれに対し異議を述べないこととします。</li>
+                        <li>オーナーから弊社に対し、サイトページの掲載停止又は削除が申請された場合、弊社は14営業日以内にサイトページの掲載停止又は削除を行うこととします。</li>
+                        <li>オーナーは、弊社の事前の承諾のない限り、本サービス以外で、スペースの提供その他それに類似する取引をユーザー又は第三者と行ってはならないものとします。</li>
+                   </ol>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <h4>第4条（表明及び保証）</h4>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <ol>
+                        <li>オーナーは、利用契約を締結するに際して、本サービスを利用し、第１条第１項に定めるスペース提供を行う権限を有し、民法その他法令及び第三者との契約を遵守していることを表明します。</li>
+                        <li>オーナーは、前項の規定に違反したことにより自らに生じた損害については、弊社に賠償請求することができないものとします。また、弊社は、オーナーに対して、オーナーが前項の規定に違反したことにより生じた損害について賠償請求をすることができるものとします。</li>
+                   </ol>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <h4>第5条（利用者の募集）</h4>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <ol>
+                        <li>本サービスの利用を通じて成立した荷物預かり契約の当事者は、本サービスの利用規約に基づき、オーナーとユーザーが当事者となり、弊社は契約当事者とはならないことをオーナー及び弊社はあらかじめ確認するものとします。</li>
+                        <li>オーナーは、弊社の事前の書面による承諾のない限り、利用契約の有効期間中及び利用契約終了後3年が経過するまでの間、本サービスと同一又は類似するサービスを行ってはならない。</li>
+                   </ol>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <h4>第6条（手数料・利用報酬額）</h4>
+                </div>
+                <div style={{marginTop:"20px"}}>
+                    <ol>
+                        <li>弊社は、ユーザーがオーナーの提供するスペースを利用したことによる利用料（サイトページに記載された金額をいう。）及び消費税相当額をオーナーに代わって受領するものとし、その１ヶ月間の合計金額（以下「月間利用料」という。）のうち、50％を幣社に対する本サービス利用の手数料（消費税含む。）として差し引き、残りの50％に相当する金額（以下「利用報酬額」といい、消費税含む。）をオーナーに対して支払うものとします。但し、ユーザーがクレジットカードによる本サービス上での支払いではなく、オーナーに直接利用料を支払った場合（以下、「現地決済」という。）、上記の手数料の分配率に応じて、オーナーは、弊社に対して本サービス利用の手数料（消費税含む。以下「現地決済分手数料」という。）を支払うものとします。</li>
+                        <li>ユーザーが荷物預かり契約で定める利用期間を超過して使用した場合、ユーザーが利用期間超過により支払うことになる料金（以下「超過料金」という。）は前項の月間利用料に算入されるものとします。なお、オーナーは、超過料金をサイトページに明記するものとします。</li>
+                        <li>第１項に定める利用報酬額は、計算対象となる月の末日（以下「締め日」という。）に確定します。</li>
+                        <li>月間利用料は、弊社の管理するサーバ上のデータをもとに、弊社が算定するものとする。</li>
+                        <li>オーナーは、荷物預かり契約に基づきユーザーに対して有する月間利用料債権（超過料金を含む。）及びキャンセル料債権について、弊社に対し、オーナーを代理してユーザーから支払いを受ける権限（以下「代理受領権」という。）を付与します。</li>
+                        <li>弊社は、締め日の翌月末までに、オーナーが指定する銀行口座に利用報酬額を振り込むものとします。なお、振込手数料は弊社の負担とします。</li>
+                        <li>弊社は、決済事業者（ストライプジャパン株式会社又は弊社がオーナーに通知する決済事業者を指す。以下同じ。）との間で、決済サービス契約を締結することができるものとします。この場合、弊社は当該決済事業者に対し第５項の代理受領権を再許諾することがあり、オーナーはこれを予め承諾するものとします。</li>
+                        <li>前項に基づき弊社が決済事業者に対し代理受領権を再許諾した場合、オーナーに対する利用報酬額の支払いは決済事業者を通じて行うものとし、決済事業者の決済サービスにかかる手数料等は弊社が負担するものとします。</li>
+                        <li>弊社は、オーナーが弊社から不適切に金員を得ることを目的としてスペースの貸与を行ったと合理的に判断される場合には、本条に定める金員を支払わないことができるものとします。</li>
+                   </ol>
                 </div>
             </div>
         </div>

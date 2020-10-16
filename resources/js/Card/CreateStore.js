@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { store } from '../register/UserFunctions'
 import LeftSideBar from '../animations/LeftSideBar'
 import MiniMap from './MiniMap'
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBModalFooter } from 'mdbreact';
+import '../style/Main_image.css';
+import { size } from 'lodash';
+import Footer from '../layout/Footer';
+import Header from '../layout/Header';
 
 class CreateStore extends Component {
     constructor() {
@@ -36,8 +41,8 @@ class CreateStore extends Component {
             keeper_store_openinghours: this.state.keeper_store_openinghours,
             keeper_store_bag_cnt: this.state.keeper_store_bag_cnt,
             keeper_store_car_cnt: this.state.keeper_store_car_cnt,
-            keeper_store_latitude: 35.89625645130803,
-            keeper_store_longtitude: 128.62188524093625,
+            keeper_store_latitude: 35.866526916270466,
+            keeper_store_longtitude: 128.58999914016712,
             keeper_store_imgurl: this.state.keeper_store_imgurl
         }
 
@@ -50,110 +55,223 @@ class CreateStore extends Component {
         
         return (
             <div>
-                <LeftSideBar/>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6 mt-5 mx-auto">
-                            <form noValidate onSubmit={this.onSubmit}>
-                                <h1 className="h3 mb-3 font-weight-normal">
-                                    매장 등록
-                                </h1>
-                                <div className="form-group">
-                                    <label htmlFor="keeper_store_name">가게 이름</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="keeper_store_name"
-                                        placeholder="Enter Keeper Name"
-                                        value={this.state.keeper_store_name}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="keeper_store_address">가게 주소</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="keeper_store_address"
-                                        placeholder="Enter Keeper Address"
-                                        value={this.state.keeper_store_address}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="keeper_store_tel">전화번호</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="keeper_store_tel"
-                                        placeholder="Enter Keeper PhoneNumber"
-                                        value={this.state.keeper_store_tel}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="keeper_store_openinghours">오픈시간</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="keeper_store_openinghours"
-                                        placeholder="00:00~00:00"
-                                        value={this.state.keeper_store_openinghours}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="keeper_store_bag_cnt">가방개수</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="keeper_store_bag_cnt"
-                                        placeholder="0"
-                                        value={this.state.keeper_store_bag_cnt}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="keeper_store_car_cnt">캐리어개수</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="keeper_store_car_cnt"
-                                        placeholder="0"
-                                        value={this.state.keeper_store_car_cnt}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="keeper_store_imgurl">이미지</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="keeper_store_imgurl"
-                                        placeholder="Enter Keeper ImgURL"
-                                        value={this.state.keeper_store_imgurl}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                <MiniMap google={this.props.google}
-					                center={{lat: 35.89625645130803, lng: 128.62188524093625}}
-					                height='300px'
-                                    zoom={15}
-                                    />
-                                </div>
-                                <br/>
-                                <br/>
-                                <button
-                                    type="submit"
-                                    className="btn btn-lg btn-primary btn-block"
-                                >
-                                    등록
-                                </button>
-                            </form>
+                <div className='Main_image' style={{width: '100vw',height: '140vh'}}>
+                    <Header/>
+                    <div className="creat_store">
+                            <div className="col-md-6 mt-5 mx-auto">
+                                <MDBContainer>
+                                    <MDBRow >
+                                        <MDBCol md="6">
+                                        <MDBCard style={{width:'500px',height:'1150px', marginLeft:'50%'}}>
+                                            <MDBCardBody className="mx-4">
+                                            <form noValidate onSubmit={this.onSubmit}>
+                                            <p className="h4 text-center py-4">保管所登録</p>
+                                            <MDBInput
+                                                label="保管所の名前"
+                                                group
+                                                type="text"
+                                                validate
+                                                name="keeper_store_name"
+                                                error="wrong"
+                                                success="right"
+                                                value={this.state.keeper_store_name}
+                                                onChange={this.onChange}
+                                            />
+                                            <MDBInput
+                                                label="保管所の住所"
+                                                group
+                                                type="text"
+                                                validate
+                                                name="keeper_store_address"
+                                                error="wrong"
+                                                success="right"
+                                                value={this.state.keeper_store_address}
+                                                onChange={this.onChange}
+                                            />
+                                            <MDBInput
+                                                label="電話番号"
+                                                group
+                                                type="text"
+                                                validate
+                                                name="keeper_store_tel"
+                                                error="wrong"
+                                                success="right"
+                                                value={this.state.keeper_store_tel}
+                                                onChange={this.onChange}
+                                            />
+                                            <MDBInput
+                                                label="オープン時間"
+                                                group
+                                                type="text"
+                                                validate
+                                                name="keeper_store_openinghours"
+                                                error="wrong"
+                                                success="right"
+                                                value={this.state.keeper_store_openinghours}
+                                                onChange={this.onChange}
+                                            />
+                                            <MDBInput
+                                                label="カバン数"
+                                                group
+                                                type="text"
+                                                validate
+                                                name="keeper_store_bag_cnt"
+                                                error="wrong"
+                                                success="right"
+                                                value={this.state.keeper_store_bag_cnt}
+                                                onChange={this.onChange}
+                                            />
+                                            <MDBInput
+                                                label="スーツケース数"
+                                                group
+                                                type="text"
+                                                validate
+                                                name="keeper_store_car_cnt"
+                                                error="wrong"
+                                                success="right"
+                                                value={this.state.keeper_store_car_cnt}
+                                                onChange={this.onChange}
+                                            />
+                                            <MDBInput
+                                                label="イメージ"
+                                                group
+                                                type="text"
+                                                validate
+                                                name="keeper_store_imgurl"
+                                                error="wrong"
+                                                success="right"
+                                                value={this.state.keeper_store_imgurl}
+                                                onChange={this.onChange}
+                                            />
+                                            <MiniMap google={this.props.google}
+                                                center={{lat: 35.87068276769894, lng: 128.5940117248534}}
+                                                height='300px'
+                                                zoom={15}
+                                            />
+                                            <div className='save_button' style={{marginTop:'100px'}}>
+                                                <MDBBtn
+                                                type="submit"
+                                                gradient="blue"
+                                                rounded
+                                                className="btn btn-lg btn-primary btn-block"
+                                                >
+                                                登録
+                                                </MDBBtn>
+                                            </div>
+                                            </form>
+                                            </MDBCardBody>
+                                        </MDBCard>
+                                        </MDBCol>
+                                    </MDBRow>
+                                </MDBContainer>
+                                    {/* <div className="row col-md-12">
+                                        <div className="jumbotron col-md-4" style={{marginLeft:'25%'}}>
+                                            <h1 className="h3 mb-3 text-center font-weight-normal">
+                                            店舗登録
+                                            </h1>
+                                            <div className="form-group">
+                                                <label htmlFor="keeper_store_name">店舗の名前</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="keeper_store_name"
+                                                    placeholder="店舗の名前を入力してください"
+                                                    value={this.state.keeper_store_name}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="keeper_store_address">店舗の住所</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="keeper_store_address"
+                                                    placeholder="店舗の住所を入力してください"
+                                                    value={this.state.keeper_store_address}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="keeper_store_tel">電話番号</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="keeper_store_tel"
+                                                    placeholder="電話番号を入力してください"
+                                                    value={this.state.keeper_store_tel}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="keeper_store_openinghours">オープン時間</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="keeper_store_openinghours"
+                                                    placeholder="00:00~00:00"
+                                                    value={this.state.keeper_store_openinghours}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="keeper_store_bag_cnt">カバン数</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="keeper_store_bag_cnt"
+                                                    placeholder="0"
+                                                    value={this.state.keeper_store_bag_cnt}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="keeper_store_car_cnt">スーツケース数</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="keeper_store_car_cnt"
+                                                    placeholder="0"
+                                                    value={this.state.keeper_store_car_cnt}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="keeper_store_imgurl">イメージ</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="keeper_store_imgurl"
+                                                    placeholder="イメージのURLを入力してください"
+                                                    value={this.state.keeper_store_imgurl}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div>
+                                            <MiniMap google={this.props.google}
+                                        center={{lat: 35.87068276769894, lng: 128.5940117248534}}
+                                        height='300px'
+                                                zoom={15}
+                                                />
+                                            <div className='save_button' style={{marginTop:'100px'}}>
+                                                <MDBBtn
+                                                type="submit"
+                                                gradient="blue"
+                                                rounded
+                                                className="btn btn-lg btn-primary btn-block"
+                                                >
+                                                登録
+                                                </MDBBtn>
+                                            </div>
+                                            {/* <button
+                                                type="submit"
+                                                className="btn btn-lg btn-primary btn-block">
+                                                登録
+                                            </button> */}
+                                    
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                <Footer/>
             </div>
         )
     }

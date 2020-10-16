@@ -2,19 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Keeper;
-use App\Kstoreinfo;
 use Illuminate\Http\Request;
+use App\Keeper;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-//use JWTAuth;
-use Tymon\JWTAuth\Facades\JWTAuth;
-use Tymon\JWTAuth\Facades\JWTFactory;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Contracts\JWTSubject;
-use Tymon\JWTAuth\PayloadFactory;
-use Tymon\JWTAuth\JWTManager as JWT;
+use App\Kstoreinfo;
 
 class KeeperxController extends Controller
 {
@@ -128,64 +119,6 @@ class KeeperxController extends Controller
       $json = \App\Keeper::destroy($id);
 
       return json_encode('Destroy seccessfully');
-  }
-
-  public function register(Request $request)
-  {
-      $validator = Validator::make($request->json()->all() , [
-          'keeper_name' => 'required|string|max:255',
-          'keeper_email' => 'required|string|email|max:255|unique:keepers',
-          'keeper_password' => 'required|string|min:6',
-          'keeper_phonenumber' => 'required|string|min:11', 
-      ]);
-
-      if($validator->fails()){
-              return response()->json($validator->errors()->toJson(), 400);
-      }
-
-      $keeper = Keeper::create([
-          'keeper_name' => $request->json()->get('keeper_name'),
-          'keeper_email' => $request->json()->get('keeper_email'),
-          'keeper_phonenumber' => $request->json()->get('keeper_phonenumber'),
-          'keeper_password' => $request->json()->get('keeper_password'),
-      ]);
-
-      $token = JWTAuth::fromUser($keeper);
-
-      return response()->json(compact('keeper','token'),201);
-  }
-  
-  public function login(Request $request)
-  {
-      $credentials = $request->json()->all();
-
-      try {
-          if (! $token = JWTAuth::attempt($credentials)) {
-              return response()->json(['error' => 'invalid_credentials'], 400);
-          }
-      } catch (JWTException $e) {
-          return response()->json(['error' => 'could_not_create_token'], 500);
-      }
-
-      return response()->json( compact('token') );
-  }
-
-  
-
-  public function getAuthenticatedKeeper()
-  {
-      try {
-          if (! $keeper = JWTAuth::parseToken()->authenticate()) {
-              return response()->json(['user_not_found'], 404);
-          }
-      } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
-          return response()->json(['token_expired'], $e->getStatusCode());
-      } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
-          return response()->json(['token_invalid'], $e->getStatusCode());
-      } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
-          return response()->json(['token_absent'], $e->getStatusCode());
-      }
-      return response()->json(compact('keeper'));
   }
 
 }

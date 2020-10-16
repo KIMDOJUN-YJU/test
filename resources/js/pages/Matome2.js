@@ -9,7 +9,7 @@ import Profile from './Profile'
 import Others from './Others'
 import EditAsoCafe from '../Card/EditAsoCafe'
 import EditTwoSome from '../Card/EditTwoSome'
-
+import EditCgvHyun from '../Card/EditCgvHyun'
 
 
 class Matome2 extends React.Component {
@@ -23,8 +23,9 @@ class Matome2 extends React.Component {
             <Route path='/keepermenu/paymentlist' component={PaymentList}/>
             <Route path='/keepermenu/profile' component={Profile}/>
             <Route path='/keepermenu/others' component={Others}/>
-            <Route path='/keepermenu/kpmanagement/editasocafe' component={EditAsoCafe}/>
-            <Route path='/keepermenu/kpmanagement/edittwosome' component={EditTwoSome}/>
+            <Route path='/keepermenu/kpmanagement/edit/1' component={EditAsoCafe}/>
+            <Route path='/keepermenu/kpmanagement/edit/2' component={EditTwoSome}/>
+            <Route path='/keepermenu/kpmanagement/edit/3' component={EditCgvHyun}/>
           </BrowserRouter>
         );
     }

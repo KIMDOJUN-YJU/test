@@ -13,30 +13,30 @@ const Footer = () => {
             </p>
           </MDBCol>
           <MDBCol md="3">
-            <h5 className="title">회사 정보</h5>
+            <h5 className="title">会社情報</h5>
             <ul>
               <li className="list-unstyled">
-                <a href="#!">회사 홈페이지</a>
+                <a href="#!">会社ホームページ</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">회사 개요</a>
+                <a href="#!">会社概要</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">채용 정보</a>
+                <a href="#!">採用情報</a>
               </li>
             </ul>
           </MDBCol>
           <MDBCol md="3">
-            <h5 className="title">기타</h5>
+            <h5 className="title">その他</h5>
             <ul>
               <li className="list-unstyled">
-                <a href="#!">이용 규약</a>
+                <a href="#!">利用規約</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">프라이버시 규약</a>
+                <a href="#!">プライバシーポリシー</a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">문의</a>
+                <a href="#!">お問い合わせ</a>
               </li>
             </ul>
           </MDBCol>

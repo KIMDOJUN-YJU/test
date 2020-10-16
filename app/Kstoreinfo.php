@@ -23,7 +23,7 @@ class Kstoreinfo extends Model
   }
   public function evaluations()
   {
-    return $this->hasMany(Reservation::class);
+    return $this->hasMany(Evaluation::class);
   }
   public $timestamps = false;
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import LeftSideBar from '../animations/LeftSideBar';
+import { MDBBtn,MDBCard,MDBCol,MDBContainer,MDBRow } from 'mdbreact';
+import '../style/Main_image.css';
 
 class EditTwoSome extends Component{
   constructor(props){
@@ -23,7 +25,7 @@ class EditTwoSome extends Component{
   }
 
   getTwosomeDetails(){
-    axios.get('/api/kstoreinfos/4')
+    axios.get('/api/kstoreinfos/10')
     .then(response => {
       this.setState({
         keeper_store_name:response.data.keeper_store_name,
@@ -42,7 +44,7 @@ class EditTwoSome extends Component{
   editTwosome(newTwosome){
     axios.request({
       method:'put',
-      url:'/api/kstoreinfos/4',
+      url:'/api/kstoreinfos/10',
       data: newTwosome
     }).then(response => {
       this.props.history.push('/keepermenu/keepermanagement');
@@ -74,14 +76,14 @@ class EditTwoSome extends Component{
 
   render(){
     return (
-      <div>
+      <div className='Main_image' style={{width: '100vw',height: '100vh'}}>
         <LeftSideBar/>
         <div className="container">
             <div className="row">
-                <div className="col-md-6 mt-5 mx-auto">
+                <div className="col-md-6 mt-5 mx-auto jumbotron">
                     <form noValidate onSubmit={this.onSubmit.bind(this)}>
                         <h1 className="h3 mb-3 font-weight-normal">
-                          썬더치킨 동대구역점 정보수정
+                          CGV 대구한일점 情報修正
                         </h1>
                         {/* <div className="form-group">
                             <label htmlFor="keeper_store_name">가게 이름</label>
@@ -108,19 +110,19 @@ class EditTwoSome extends Component{
                             />
                         </div> */}
                         <div className="form-group">
-                            <label htmlFor="keeper_store_tel">전화번호</label>
+                            <label htmlFor="keeper_store_tel">電話番号</label>
                             <input
                                 type="text"
                                 className="form-control"
                                 name="keeper_store_tel"
                                 ref="keeper_store_tel"
-                                placeholder="Enter Keeper PhoneNumber"
+                                placeholder="電話番号を入力してください"
                                 value={this.state.keeper_store_tel}
                                 onChange={this.handleInputChange}
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="keeper_store_openinghours">오픈시간</label>
+                            <label htmlFor="keeper_store_openinghours">オープン時間</label>
                             <input
                                 type="text"
                                 className="form-control"
@@ -132,7 +134,7 @@ class EditTwoSome extends Component{
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="keeper_store_bag_cnt">가방개수</label>
+                            <label htmlFor="keeper_store_bag_cnt">カバン数</label>
                             <input
                                 type="text"
                                 className="form-control"
@@ -144,7 +146,7 @@ class EditTwoSome extends Component{
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="keeper_store_car_cnt">캐리어개수</label>
+                            <label htmlFor="keeper_store_car_cnt">スーツケース数</label>
                             <input
                                 type="text"
                                 className="form-control"
@@ -156,23 +158,31 @@ class EditTwoSome extends Component{
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="keeper_store_imgurl">이미지</label>
+                            <label htmlFor="keeper_store_imgurl">イメージ</label>
                             <input
                                 type="text"
                                 className="form-control"
                                 name="keeper_store_imgurl"
                                 ref="keeper_store_imgurl"
-                                placeholder="Enter Keeper ImgURL"
+                                placeholder="イメージのURLを入力してください"
                                 value={this.state.keeper_store_imgurl}
                                 onChange={this.handleInputChange}
                             />
                         </div>
-                        <button
+                        {/* <button
                             type="submit"
                             className="btn btn-lg btn-primary btn-block"
                         >
-                            수정
-                        </button>
+                            修正
+                        </button> */}
+                        <MDBBtn
+                          type="submit"
+                          gradient="blue"
+                          rounded
+                          className="btn btn-lg btn-primary btn-block"
+                          >
+                          修正
+                        </MDBBtn>
                     </form>
                 </div>
             </div>

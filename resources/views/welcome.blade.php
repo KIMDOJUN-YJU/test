@@ -15,8 +15,7 @@
     <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json" />
 </head>
 <body>
     <div id="app"></div>

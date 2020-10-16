@@ -1,0 +1,24 @@
+body {
+    margin : 0px;
+}
+
+.Main_image {
+    background: url("../../../public/메인이미지.jpg");
+    background-size:cover;
+    background-position:top;
+    background: cover;
+}
+
+.Main_image2 {
+    background: url("../../../public/메인이미지2.jpg");
+    background-size:cover;
+    background-position:top;
+    background: cover;
+}
+
+.Main_image3 {
+    background: url("../../../public/메인이미지3.jpg");
+    background-size:cover;
+    background-position:top;
+    background: cover;
+}

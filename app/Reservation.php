@@ -8,7 +8,7 @@ class Reservation extends Model
 {
   protected $fillable = [
       'reservation_id', 'keeper_store_id', 'tourist_id','delivery_id','check_in','check_out'
-      ,'bag_cnt','car_cnt','reservation_status'
+      ,'bag_cnt','car_cnt','reservation_status', 'reservation_latitude','reservation_longtitude',
   ];
 
   public function kstoreinfos()

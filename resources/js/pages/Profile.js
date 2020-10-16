@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { getProfile } from '../register/UserFunctions'
 import LeftSideBar from '../animations/LeftSideBar'
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBIcon } from 'mdbreact';
+import '../style/Main_image.css';
 
 class Profile extends Component {
   constructor(props){
@@ -64,57 +66,77 @@ class Profile extends Component {
 
     render() {
         return (
-          <div>
+          <div className='Main_image3' style={{width: '100vw',height: '100vh'}}>
             <LeftSideBar/>
-            <div className="container">
+            <div className="container" style={{marginTop:'7%',width:'50%'}}>
                 <div className="jumbotron mt-5">
-                    <div className="col-sm-4 mx-auto">
-                        <h1 className="text-center">PROFILE</h1>
+                <div className="col-sm-4 mx-auto">
+                        <h1 className="text-center">プロフィール</h1>
                     </div>
                     <table className="table col-md-4 mx-auto">
                         <tbody>
                           <div className="form-group">
-                              <label htmlFor="name">이름</label>
+                              <label htmlFor="name">名前</label>
                               <input
                                   type="text"
                                   className="form-control"
                                   name="name"
                                   ref="name"
-                                  placeholder="Enter Your Name"
+                                  placeholder="名前を入力してください"
                                   value={this.state.name}
                                   onChange={this.handleInputChange}
                               />
                           </div>
                           <div className="form-group">
-                              <label htmlFor="email">이메일</label>
+                              <label htmlFor="email">イーメール</label>
                               <input
                                   type="text"
                                   className="form-control"
                                   name="email"
                                   ref="email"
-                                  placeholder="Enter Your Address"
+                                  placeholder="メールアドレスを入力してください"
                                   value={this.state.email}
                                   onChange={this.handleInputChange}
                               />
                           </div>
                           <div className="form-group">
-                              <label htmlFor="phonenumber">전화번호</label>
+                              <label htmlFor="phonenumber">電話番号</label>
                               <input
                                   type="text"
                                   className="form-control"
                                   name="phonenumber"
                                   ref="phonenumber"
-                                  placeholder="Enter Your PhoneNumber"
+                                  placeholder="電話番号を入力してください"
                                   value={this.state.phonenumber}
                                   onChange={this.handleInputChange}
                               />
                           </div>
-                          <button
+                          <div className="form-group">
+                              <label htmlFor="phonenumber">住所</label>
+                              <input
+                                  type="text"
+                                  className="form-control"
+                                  name="phonenumber"
+                                  ref="phonenumber"
+                                  placeholder="住所を入力してください"
+                                  value={this.state.phonenumber}
+                                  onChange={this.handleInputChange}
+                              />
+                          </div>
+                          {/* <button
                               type="submit"
                               className="btn btn-lg btn-primary btn-block"
                           >
-                              수정
-                          </button>
+                              修正
+                          </button> */}
+                          <MDBBtn
+                                    type="submit"
+                                    gradient="blue"
+                                    rounded
+                                    className="btn-block z-depth-1a btn-primary mt-6"
+                                    >
+                                    修正
+                          </MDBBtn>
                         </tbody>
                     </table>
                 </div>
